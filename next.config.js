@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
   reactStrictMode: true,
-  basePath: 'CodeTriad-Solutions/',
+  output: 'export',
+  basePath: process.env.NODE_ENV === 'production' ? '/CodeTriad-Solutions' : '',
 };
 
 module.exports = nextConfig;
